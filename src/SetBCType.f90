@@ -1,17 +1,22 @@
 subroutine SetBCType
-!=======================================================
-!
-!  This subroutine sets the boundary condition type. Currently supported options are:
-!
-!    1   single upstream dropshaft
-!    2   single downstream dropshaft
-!    3   two-way dropshaft
-!    4   three-way dropshaft
-!    5   three-way split
-!    6   slope change
-!    7   level time series
-!
-!=======================================================
+!%=====================================================================
+!% OpenSHAFT release, version 1.0.0
+!% 20240924
+!% A one-dimensional finite volume solver for mixed-flow hydraulic systems
+!% September 24, 2024
+!%
+!% Description:
+!%  This subroutine sets the boundary condition type. Currently supported options are:
+!%
+!%    1   single upstream dropshaft
+!%    2   single downstream dropshaft
+!%    3   two-way dropshaft
+!%    4   three-way dropshaft
+!%    5   three-way split
+!%    6   slope change
+!%    7   level time series
+!%
+!%=====================================================================
 
 use GlobalVariables
 

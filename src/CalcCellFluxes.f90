@@ -1,4 +1,13 @@
 subroutine CalcCellFluxes
+!%=====================================================================
+!% OpenSHAFT release, version 1.0.0
+!% 20240924
+!% A one-dimensional finite volume solver for mixed-flow hydraulic systems
+!% September 24, 2024
+!%
+!% Description:
+!% Updates flux terms in St. Venant eqs	
+!%=====================================================================
 
 use GlobalVariables
 

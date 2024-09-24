@@ -1,4 +1,13 @@
 subroutine SetInitialConditions
+!%=====================================================================
+!% OpenSHAFT release, version 1.0.0
+!% 20240924
+!% A one-dimensional finite volume solver for mixed-flow hydraulic systems
+!% September 24, 2024
+!%
+!% Description:
+!% Initializes the depthj in reach cells and junctions, or reads a hot start file	
+!%=====================================================================
         
 use GlobalVariables
 use GlobalFunctions

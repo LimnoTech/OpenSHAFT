@@ -1,4 +1,13 @@
 subroutine SaveOutputVariables
+!%=====================================================================
+!% OpenSHAFT release, version 1.0.0
+!% 20240924
+!% A one-dimensional finite volume solver for mixed-flow hydraulic systems
+!% September 24, 2024
+!%
+!% Description:
+!% saves previous values of all output variables	
+!%=====================================================================
 use GlobalVariables
 implicit none
 ! PRK 1/28/2015 this routine saves old values of all variables that are written to output, necessary for time interpolation at exact write times

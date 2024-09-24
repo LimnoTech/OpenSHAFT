@@ -1,4 +1,13 @@
 subroutine SlideGate
+!%=====================================================================
+!% OpenSHAFT release, version 1.0.0
+!% 20240924
+!% A one-dimensional finite volume solver for mixed-flow hydraulic systems
+!% September 24, 2024
+!%
+!% Description:
+!% Boundary condition for a slide gate - UNDER DEVELOPMENT (please do not use!)	
+!%=====================================================================
 
 use GlobalVariables
 use GlobalFunctions

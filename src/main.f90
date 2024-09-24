@@ -1,5 +1,28 @@
 program OpenSHAFT
-
+!%=====================================================================
+!% OpenSHAFT release, version 1.0.0
+!% 20240924
+!% A one-dimensional finite volume solver for mixed-flow hydraulic systems
+!% September 24, 2024
+!%
+!% Primary contact: Peter Klaver, email: pklaver@limno.com
+!% 
+!% Code authors
+!% Jose Vasconselos -- original design and core calculations (in Delphi Pascal)
+!% Peter Klaver -- conversion to Fortran, additional boundary conditions    
+!%   
+!% This code is made available under the GNU General Public License, version 3
+!%     
+!% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+!% EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+!% MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+!% IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+!% OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+!% ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+!% OTHER DEALINGS IN THE SOFTWARE.
+!%
+!%=====================================================================
+  
 use GlobalVariables
 use GlobalFunctions, only: wtime
 use omp_lib

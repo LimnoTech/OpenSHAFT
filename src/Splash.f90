@@ -1,4 +1,13 @@
 subroutine Splash
+!%=====================================================================
+!% OpenSHAFT release, version 1.0.0
+!% 20240924
+!% A one-dimensional finite volume solver for mixed-flow hydraulic systems
+!% September 24, 2024
+!%
+!% Description:
+!% Writes a header to the console to keep the modeler interested
+!%=====================================================================
 
 use GlobalVariables, only: sj1,sj2,sj3
 

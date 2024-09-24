@@ -1,8 +1,13 @@
 subroutine InnerSlopeChange
-
-!===================================================================================================
-!     this code is part of OpenSHAFT
-!===================================================================================================
+!%=====================================================================
+!% OpenSHAFT release, version 1.0.0
+!% 20240924
+!% A one-dimensional finite volume solver for mixed-flow hydraulic systems
+!% September 24, 2024
+!%
+!% Description:
+!% Boundary condition to accomodate change in slope for otherwise constant cross sections	
+!%=====================================================================
 
 use GlobalVariables
 use GlobalFunctions

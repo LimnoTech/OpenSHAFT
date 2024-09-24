@@ -1,7 +1,16 @@
 subroutine ThreeWaySplit
+!%=====================================================================
+!% OpenSHAFT release, version 1.0.0
+!% 20240924
+!% A one-dimensional finite volume solver for mixed-flow hydraulic systems
+!% September 24, 2024
+!%
+!% Description:
+!% Boundary condition for three reaches: two at downstream end, two at upstream end	
+!%=====================================================================
 
 use GlobalVariables
-use GlobalFunctions
+use GlobalFunctionsone
 
 implicit none
 
