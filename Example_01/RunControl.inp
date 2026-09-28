@@ -1,0 +1,27 @@
+! run control input file for OpenSHAFT (4 header lines, do not add or remove any lines)
+! 
+! 
+! 
+Example_01	! Run ID, max 40 characters
+3600.1		! Tsim, simulation length in seconds
+5.0		! Twrite, output writing interval in seconds
+5.0		! StartWrite, time to start output writing
+3600.0		! StopWrite, time to stop output writing (must be <= Tsim)
+0.9		! Crf, Courant number for setting time step
+1.0		! HFnf, hybrid flux factor (see documentation)
+0.5		! Ratio_dx_dpipe
+0.001		! initHfrac
+200		! amax, acoustic wave speed in cms
+0		! air exhaust switch, 1 = calculate air exahust, 0 = don't
+0		! air pocket switch, 1 = trap air pockets, 0 = don't
+0		! start condition; 0 = empty, 1 = specify static HGL in InitHGL.inp, 2 = hot start
+1		! display head at junction n
+4		! display head at junction n
+5		! display head at junction n
+1.18		! alpha1
+1.12		! alpha2
+1.05		! alpha4
+60.0		! pocket threshold volume m3
+4		! number of cells in pocket buffer zone
+4		! number of threads
+dumm.hotstart	! hotstart ID name

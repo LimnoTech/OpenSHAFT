@@ -16,7 +16,7 @@ implicit none
 
 real(wp) :: Kmid,Hup,Hdown,dVn1,dVn2,dVn3,dVn4,dVm1,dVm2,dVm3,dVm4,dYm1,dYm2,dYm3,dYm4
 real(wp) :: ZL,ZR,Zcorr,ReachZL,ReachZR,AL,CL,VL,HcL,TfsL,Kloss,JElev,Vlold,QlimL,QlimR,Hconj1,Rf1,Rf2,B1,B2,f1,f2,CP1,CM2,BP1,BM2,SB,SC
-real(wp) :: Vs,cs,Sfs,ys,Ks,Vr,cr,Sfr,yr,Kr,r
+real(wp) :: Vs,cs,Sfs,ys,Ks,Vr,cr,Sfr,yr,Kr,r,Htotal
 
 integer :: niter,iL,jL,iR,jR,kk
 
@@ -620,8 +620,8 @@ select case(JunctionCase)
 ! assume one C+ characteristic line arriving into the
 ! junction, and one C- characteristic line leaving
 
-    CP1=y(iL-1,jL) + Zcorr + B1*Q(iL-1,jL)
-    CM2=y(iR+1,jR) - B2*Q(iR+1,jR)
+    CP1=y(iL-1,jL) + z(iL-1,jL) + B1*Q(iL-1,jL)
+    CM2=y(iR+1,jR) + z(iR+1,jR) - B2*Q(iR+1,jR)
 
     BP1=B1 + Rf1*abs(Q(iL-1,jL))
     BM2=B2 - Rf2*abs(Q(iR+1,jR))
@@ -632,19 +632,21 @@ select case(JunctionCase)
 ! overall pressure is uniform for all cells and junction, the value
 ! calculated by the expression. I am assuming that Qn=0
   
-    Junc(k)%Head=SC/SB + (1/SB)*0
+    Htotal=SC/SB + (1/SB)*0
+    Junc(k)%Head=Htotal - Junc(k)%Elev
 
-    y(iL,jL)=Junc(k)%Head-Zcorr
-    y(iR,jR)=Junc(k)%Head
-
-    Q(iL,jL)= CP1/BP1 - Junc(k)%Head/BP1
-    Q(iR,jR)=-CM2/BM2 + Junc(k)%Head/BM2
+    Q(iL,jL)= (CP1 - Htotal)/BP1
+    Q(iR,jR)= (Htotal - CM2)/BM2 
 
     A(iL,jL)=FindArea(iL,jL)
     V(iL,jL)=Q(iL,jL)/A(iL,jL)
 
     A(iR,jR)=FindArea(iR,jR)
     V(iR,jR)=Q(iR,jR)/A(iR,jR)
+    
+    y(iL,jL)=Junc(k)%Head-Zcorr
+    y(iR,jR)=Junc(k)%Head
+    
 ! PRK 10/4/2012 insert corrected handling of boundary cells instead of call to TPACalcBC (which does not handle negative depth although it is legal in this case)    
     i=iL
     j=jL

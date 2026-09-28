@@ -10,7 +10,7 @@ subroutine ThreeWaySplit
 !%=====================================================================
 
 use GlobalVariables
-use GlobalFunctionsone
+use GlobalFunctions
 
 implicit none
 
@@ -489,14 +489,14 @@ select case(JunctionCase)
 
   case(5)
   
- Junc(k)%Head=0.001
+  Junc(k)%Head=0.001
   converged=.false.
 
   Hup=max(Reach(j1)%D+Z1,Reach(j3)%D+Z3)
   Hdown=0.001
 
   do while(not(converged))
-   Junc(k)%Head=0.5*(Hup+Hdown)
+    Junc(k)%Head=0.5*(Hup+Hdown)
     niter=niter+1
 
     y(i1,j1)=max(initHfrac*Reach(j1)%D,Junc(k)%Head-Z1+Reach(j1)%dX/2*Reach(j1)%So)
@@ -612,7 +612,7 @@ select case(JunctionCase)
     V(i1,j1)=V1old + (dV11+2*(dV12+dV13)+dV14)/6.0_wp
     V(i2,j2)=V2old + (dV21+2*(dV22+dV23)+dV24)/6.0_wp
     V(i3,j3)=V3old + (dV31+2*(dV32+dV33)+dV34)/6.0_wp
-   Junc(k)%Head=Junc(k)%Head + (dY1+2*(dY2+dY3)+dY4)/6.0_wp
+    Junc(k)%Head=Junc(k)%Head + (dY1+2*(dY2+dY3)+dY4)/6.0_wp
 
 	y(i1,j1)=max(Junc(k)%Head-Z1+Reach(j1)%Kdown*V(i1,j1)*abs(V(i1,j1))/(2*g),initHfrac*Reach(j1)%D)
     A(i1,j1)=FindArea(i1,j1)
@@ -632,14 +632,14 @@ select case(JunctionCase)
   
   case(9)
       
-   Junc(k)%Head=0.001
+    Junc(k)%Head=0.001
     converged=.false.
 
     Hup=max(Reach(j1)%D+Z1,Reach(j3)%D+Z3)
     Hdown=0.001
 
     do while(not(converged))
-     Junc(k)%Head=0.5*(Hup+Hdown)
+      Junc(k)%Head=0.5*(Hup+Hdown)
       niter=niter+1
 
       y(i2,j2)=max(initHfrac*Reach(j2)%D,Junc(k)%Head-Z2-Reach(j2)%dX/2*Reach(j2)%So)
@@ -714,7 +714,7 @@ select case(JunctionCase)
         Hdown=Junc(k)%Head
       end if
       if (Hup < Hdown) then
-       Junc(k)%Head=Hup
+        Junc(k)%Head=Hup
         Hup=Hdown
         Hdown=Junc(k)%Head
       end if
@@ -724,14 +724,14 @@ select case(JunctionCase)
 
   case(10)
       
-   Junc(k)%Head=0.001
+    Junc(k)%Head=0.001
     converged=.false.
 
     Hup=max(Reach(j1)%D+Z1,Reach(j3)%D+Z3)
     Hdown=0.001
 
     do while(not(converged))
-     Junc(k)%Head=0.5*(Hup+Hdown)
+      Junc(k)%Head=0.5*(Hup+Hdown)
       niter=niter+1
 
       y(i3,j3)=max(initHfrac*Reach(j3)%D,Junc(k)%Head-Z3-Reach(j3)%dX/2*Reach(j3)%So)

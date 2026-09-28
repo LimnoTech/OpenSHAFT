@@ -1,0 +1,12 @@
+! junctions for OpenSHAFT Example_01
+!											
+! JuncID, BCType, Elev, ShaftArea, OverflowElev, WeirLength, InflowInit, Option
+!
+1	1	100	25	135	5	-999	0
+2	1	98.5	0	500	0	0	0
+3	1	97.5	0	500	0	0	0
+4	1	95.5	15	500	0	0	0
+5	1	101.5	20	500	0	-999	0
+6	1	99.25	15	500	0	0	0
+7	1	100.55	8	132	2	-999	0
+8	1	129.475	8	134	2	-999	0

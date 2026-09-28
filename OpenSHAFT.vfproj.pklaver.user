@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioUserFile ProjectCreator="Intel Fortran" Keyword="Application" Version="11.0" ProjectIdGuid="{4872765F-6B58-5017-6A10-E29B68D11909}">
+	<Configurations>
+		<Configuration Name="Debug|Win32">
+		</Configuration>
+		<Configuration Name="Release|Win32">
+		</Configuration>
+		<Configuration Name="Debug|x64" WorkingDirectory="C:\Users\pklaver\UMFSURGE\SHAFT\UMF_v1\UMF_v1_R00">
+		</Configuration>
+		<Configuration Name="Release|x64">
+		</Configuration>
+	</Configurations></VisualStudioUserFile>

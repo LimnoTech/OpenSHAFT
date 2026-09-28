@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioProject ProjectCreator="Intel Fortran" Keyword="Application" Version="11.0" ProjectIdGuid="{4872765F-6B58-5017-6A10-E29B68D11909}">
+	<Platforms>
+		<Platform Name="Win32"/>
+		<Platform Name="x64"/>
+	</Platforms>
+	<Configurations>
+		<Configuration Name="Debug|Win32" UseCompiler="ifxCompiler" DeleteExtensionsOnClean="*.obj;*.mod;*.pdb;*.asm;*.map;*.dyn;*.dpi;*.tmp;*.log;*.ilk;*.exe;$(TargetPath)">
+			<Tool Name="VFFortranCompilerTool" AdditionalOptions="/ccdefault:fortran" SuppressStartupBanner="true" DebugInformationFormat="debugEnabled" Optimization="optimizeDisabled" WarnInterfaces="true" Traceback="true" BoundsCheck="true" StackFrameCheck="true" RuntimeLibrary="rtMultiThreadedDebugDLL"/>
+			<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" GenerateDebugInformation="true" SubSystem="subSystemConsole"/>
+			<Tool Name="VFResourceCompilerTool"/>
+			<Tool Name="VFMidlTool" SuppressStartupBanner="true"/>
+			<Tool Name="VFCustomBuildTool"/>
+			<Tool Name="VFPreLinkEventTool"/>
+			<Tool Name="VFPreBuildEventTool"/>
+			<Tool Name="VFPostBuildEventTool"/>
+			<Tool Name="VFManifestTool" SuppressStartupBanner="true"/>
+		</Configuration>
+		<Configuration Name="Release|Win32" UseCompiler="ifortCompiler" DeleteExtensionsOnClean="*.obj;*.mod;*.pdb;*.asm;*.map;*.dyn;*.dpi;*.tmp;*.log;*.ilk;*.exe;$(TargetPath)">
+			<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" RuntimeLibrary="rtMultiThreadedDLL"/>
+			<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" SubSystem="subSystemConsole"/>
+			<Tool Name="VFResourceCompilerTool"/>
+			<Tool Name="VFMidlTool" SuppressStartupBanner="true"/>
+			<Tool Name="VFCustomBuildTool"/>
+			<Tool Name="VFPreLinkEventTool"/>
+			<Tool Name="VFPreBuildEventTool"/>
+			<Tool Name="VFPostBuildEventTool"/>
+			<Tool Name="VFManifestTool" SuppressStartupBanner="true"/>
+		</Configuration>
+		<Configuration Name="Debug|x64" UseCompiler="ifxCompiler" DeleteExtensionsOnClean="*.obj;*.mod;*.pdb;*.asm;*.map;*.dyn;*.dpi;*.tmp;*.log;*.ilk;*.exe;$(TargetPath)">
+			<Tool Name="VFFortranCompilerTool" AdditionalOptions="/ccdefault:fortran" SuppressStartupBanner="true" DebugInformationFormat="debugEnabled" Optimization="optimizeDisabled" OpenMP="OpenMPParallelCode" WarnInterfaces="true" Traceback="true" BoundsCheck="true" StackFrameCheck="true" RuntimeLibrary="rtMultiThreadedDebugDLL"/>
+			<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" GenerateDebugInformation="true" SubSystem="subSystemConsole"/>
+			<Tool Name="VFResourceCompilerTool"/>
+			<Tool Name="VFMidlTool" SuppressStartupBanner="true" TargetEnvironment="midlTargetAMD64"/>
+			<Tool Name="VFCustomBuildTool"/>
+			<Tool Name="VFPreLinkEventTool"/>
+			<Tool Name="VFPreBuildEventTool"/>
+			<Tool Name="VFPostBuildEventTool"/>
+			<Tool Name="VFManifestTool" SuppressStartupBanner="true"/>
+		</Configuration>
+		<Configuration Name="Release|x64" UseCompiler="ifxCompiler" DeleteExtensionsOnClean="*.obj;*.mod;*.pdb;*.asm;*.map;*.dyn;*.dpi;*.tmp;*.log;*.ilk;*.exe;$(TargetPath)">
+			<Tool Name="VFFortranCompilerTool" AdditionalOptions="/ccdefault:fortran" SuppressStartupBanner="true" EnableRecursion="true" OpenMP="OpenMPParallelCode" RuntimeLibrary="rtMultiThreadedDLL"/>
+			<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" SubSystem="subSystemConsole"/>
+			<Tool Name="VFResourceCompilerTool"/>
+			<Tool Name="VFMidlTool" SuppressStartupBanner="true" TargetEnvironment="midlTargetAMD64"/>
+			<Tool Name="VFCustomBuildTool"/>
+			<Tool Name="VFPreLinkEventTool"/>
+			<Tool Name="VFPreBuildEventTool"/>
+			<Tool Name="VFPostBuildEventTool"/>
+			<Tool Name="VFManifestTool" SuppressStartupBanner="true"/>
+		</Configuration>
+	</Configurations>
+	<Files>
+		<Filter Name="Header Files" Filter="fi;fd;h;inc"/>
+		<Filter Name="Resource Files" Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"/>
+		<Filter Name="Source Files" Filter="f90;for;f;fpp;ftn;def;odl;idl">
+			<File RelativePath=".\src\AbnormalStop.f90"/>
+			<File RelativePath=".\src\CalcAirFlux.f90"/>
+			<File RelativePath=".\src\CalcCellFluxes.f90"/>
+			<File RelativePath=".\src\CalcContinuity.f90"/>
+			<File RelativePath=".\src\CalcFluxSources.f90"/>
+			<File RelativePath=".\src\ExecuteTimeLoop.f90"/>
+			<File RelativePath=".\src\FindCurrentChamberVolume.f90"/>
+			<File RelativePath=".\src\FindCurrentJuncHead.f90"/>
+			<File RelativePath=".\src\FindCurrentShaftArea.f90"/>
+			<File RelativePath=".\src\FindInflow.f90"/>
+			<File RelativePath=".\src\FindOutflow.f90"/>
+			<File RelativePath=".\src\GetLookupValue.f90"/>
+			<File RelativePath=".\src\InflowControlTrigger.f90"/>
+			<File RelativePath=".\src\InitializeVariables.f90"/>
+			<File RelativePath=".\src\InnerSlopeChange.f90"/>
+			<File RelativePath=".\src\LevelSeriesShaft.f90"/>
+			<File RelativePath=".\src\m_GlobalFunctions.f90"/>
+			<File RelativePath=".\src\m_Globals.f90"/>
+			<File RelativePath=".\src\m_kinds.f90"/>
+			<File RelativePath=".\src\main.f90"/>
+			<File RelativePath=".\src\MakeAirUnits.f90"/>
+			<File RelativePath=".\src\ReadCustomShapeTables.f90"/>
+			<File RelativePath=".\src\ReadInflowControls.f90"/>
+			<File RelativePath=".\src\ReadInput.f90"/>
+			<File RelativePath=".\src\ReadLevelSeries.f90"/>
+			<File RelativePath=".\src\ReadRatingCurves.f90"/>
+			<File RelativePath=".\src\ReadSlideGates.f90"/>
+			<File RelativePath=".\src\ReadStorageCurves.f90"/>
+			<File RelativePath=".\src\ReadVariableInflows.f90"/>
+			<File RelativePath=".\src\SaveOutputVariables.f90"/>
+			<File RelativePath=".\src\ScanForPockets.f90"/>
+			<File RelativePath=".\src\SetBCType.f90"/>
+			<File RelativePath=".\src\SetInflowControl.f90"/>
+			<File RelativePath=".\src\SetInitialConditions.f90"/>
+			<File RelativePath=".\src\SetOutputFiles.f90"/>
+			<File RelativePath=".\src\SingleDropshaftDown.f90"/>
+			<File RelativePath=".\src\SingleDropshaftUp.f90"/>
+			<File RelativePath=".\src\SlideGate.f90"/>
+			<File RelativePath=".\src\Splash.f90"/>
+			<File RelativePath=".\src\ThreeWayDropshaft.f90"/>
+			<File RelativePath=".\src\ThreeWaySplit.F90"/>
+			<File RelativePath=".\src\TPACalc.f90"/>
+			<File RelativePath=".\src\TPACalcBC.f90"/>
+			<File RelativePath=".\src\TwoWayDropshaft.f90"/>
+			<File RelativePath=".\src\UpdateAQ.f90"/>
+			<File RelativePath=".\src\UpdateAQPocket.f90"/>
+			<File RelativePath=".\src\UpdateTime.f90"/>
+			<File RelativePath=".\src\WorkBalance.f90"/>
+			<File RelativePath=".\src\WriteOutput.f90"/>
+		</Filter>
+	</Files>
+	<Globals/>
+</VisualStudioProject>
